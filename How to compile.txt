@@ -1,0 +1,57 @@
+software-greenboard ~/tmp/OpenClosedExercise-Livio$ mkdir build
+software-greenboard ~/tmp/OpenClosedExercise-Livio$ cd build/
+software-greenboard ~/tmp/OpenClosedExercise-Livio/build$ cmake ..
+-- The C compiler identification is AppleClang 15.0.0.15000309
+-- The CXX compiler identification is AppleClang 15.0.0.15000309
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/gorans/tmp/OpenClosedExercise-Livio/build
+software-greenboard ~/tmp/OpenClosedExercise-Livio/build$ make
+[ 50%] Building CXX object CMakeFiles/OpenClosedExerciseLivio.dir/OCPExercise-Solution.cpp.o
+/Users/gorans/tmp/OpenClosedExercise-Livio/OCPExercise-Solution.cpp:222:31: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            sensors.push_back(move(sensor_living_room));
+                              ^
+                              std::
+/Users/gorans/tmp/OpenClosedExercise-Livio/OCPExercise-Solution.cpp:229:31: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            sensors.push_back(move(sensor_bad_room));
+                              ^
+                              std::
+/Users/gorans/tmp/OpenClosedExercise-Livio/OCPExercise-Solution.cpp:236:31: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            sensors.push_back(move(sensor_office_room));
+                              ^
+                              std::
+/Users/gorans/tmp/OpenClosedExercise-Livio/OCPExercise-Solution.cpp:243:31: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            sensors.push_back(move(sensor_kids_room_1));
+                              ^
+                              std::
+4 warnings generated.
+[100%] Linking CXX executable OpenClosedExerciseLivio
+[100%] Built target OpenClosedExerciseLivio
+software-greenboard ~/tmp/OpenClosedExercise-Livio/build$ ./OpenClosedExerciseLivio 
+
+
+LivingRoom : AQI  132
+
+BadRoom    : AQI  44
+
+OfficeRoom : AQI  58
+             CO2          1830  ppm
+             Temperature  20    Celsius
+             Humidity     40    %
+
+KidsRoom1  : AQI  18
+             CO2          2368  ppm
+             Temperature  16    Celsius
+             Humidity     30    %
+
+software-greenboard ~/tmp/OpenClosedExercise-Livio/build$ 
